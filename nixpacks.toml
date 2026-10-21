@@ -1,0 +1,30 @@
+[variables]
+COREPACK_ENABLE_DOWNLOAD_PROMPT = "0"
+HOSTNAME = "0.0.0.0"
+NEXT_TELEMETRY_DISABLED = "1"
+NODE_ENV = "production"
+NPM_CONFIG_PRODUCTION = "false"
+
+[phases.setup]
+nixPkgs = ["nodejs_24"]
+
+[phases.install]
+cmds = [
+  "corepack enable",
+  "corepack prepare pnpm@12.4.1 --activate",
+  "pnpm install --frozen-lockfile",
+]
+cacheDirectories = ["/root/.local/share/pnpm/store"]
+paths = ["/app/node_modules/.bin"]
+
+[phases.build]
+cmds = [
+  "pnpm run build",
+  "mkdir -p .next/standalone/.next",
+  "cp -R public .next/standalone/",
+  "cp -R .next/static .next/standalone/.next/",
+]
+cacheDirectories = [".next/cache", "node_modules/.cache"]
+
+[start]
+cmd = "node .next/standalone/server.js"

@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "title": "SKLAD – kreativní prostor pro 3D, motion, AV a vývojáře v Praze",
+    "description": "SKLAD je kreativní prostor pro 3D, motion, audiovizuální i softwarové tvůrce na Smíchově. Vlastní pracovní místo, přístup 24/7 a komunita, která sdílí know-how. Přijď si to vyzkoušet."
+  },
+  "og": {
+    "alt": "SKLAD – kreativní prostor pro digitální tvůrce na Smíchově",
+    "title": "Kolektiv 3D, motion, AV i vývojářů software na Smíchově"
+  },
+  "manifest": {
+    "description": "Kreativní prostor pro 3D, motion, audiovizuální i softwarové tvůrce na pražském Smíchově."
+  },
+  "nav": {
+    "aria": "Hlavní navigace",
+    "home": "SKLAD – úvod",
+    "about": "O SKLADu",
+    "members": "Členové",
+    "benefits": "Výhody",
+    "community": "Komunita",
+    "faq": "FAQ",
+    "apply": "Vyplnit přihlášku",
+    "menuOpen": "Otevřít menu",
+    "menuClose": "Zavřít menu",
+    "menuTitle": "Menu"
+  },
+  "languageSwitcher": {
+    "label": "Jazyk",
+    "cs": "Čeština",
+    "en": "English"
+  },
+  "place": {
+    "address": "Drtinova 557/10, Praha Smíchov",
+    "hours": "Otevřeno 24/7",
+    "mapLink": "Zobrazit na mapě"
+  },
+  "hero": {
+    "title": "SKLAD je kolektiv 3D, motion, AV i vývojářů software. Přijď si vyzkoušet svoje místo.",
+    "text": "Sdílíme prostor na Smíchově, kde se potkává motion design, 3D, audiovizuální experimenty a vývoj nástrojů i aplikací. Dej nám vědět, na čem pracuješ, domluvíme prohlídku a nabídneme ti 3denní demo zdarma nebo nezávazný demo měsíc.",
+    "apply": "Vyplnit přihlášku",
+    "photoAlt": "Studio SKLADu večer: pracovní stoly s monitory, regál s rostlinami, rozsvícená lampa a vysoká okna",
+    "channelsAria": "Komunitní kanály SKLADu",
+    "facts": {
+      "address": "Adresa",
+      "access": "Přístup",
+      "accessValue": "Recepce 24/7",
+      "membership": "Členství",
+      "membershipValue": "5 000 Kč / měsíc"
+    }
+  },
+  "about": {
+    "title": "Jak funguje SKLAD",
+    "text": "Jsme kolektiv a prostor pro digitální tvůrce – od 3D a motion až po programátory interaktivních nástrojů. Každý člen má své pracovní místo, zázemí i komunitu, se kterou může sdílet know-how.",
+    "highlights": [
+      {
+        "title": "Vlastní pracovní spot",
+        "text": "Stůl, židle a regál jsou připravené – stačí si přinést vlastní setup, anebo si místo zařiď podle svého."
+      },
+      {
+        "title": "Nonstop provoz",
+        "text": "Recepce 24/7 a vlastní klíčky."
+      },
+      {
+        "title": "Otevřený nábor",
+        "text": "Vyplň přihlášku, napiš nám, stav se na prohlídku a zjisti, jestli ti SKLAD sedí. Začni 3denním demem zdarma a pokračuj nezávazným demo měsícem."
+      }
+    ]
+  },
+  "members": {
+    "title": "Členové SKLADu",
+    "text": "Seznam se s lidmi, kteří prostor (a v něm) tvoří.",
+    "rosterAria": "Přejít na člena",
+    "nameWithNickname": "{name} „{nickname}“",
+    "linksAria": "Odkazy – {name}",
+    "gallery": {
+      "label": "Ukázky práce – {name}",
+      "slide": "{index} z {count}",
+      "previous": "Předchozí ukázka",
+      "next": "Další ukázka",
+      "open": "Otevřít detail: {description}",
+      "video": "Video"
+    },
+    "lightbox": {
+      "close": "Zavřít detail",
+      "previous": "Předchozí ukázka",
+      "next": "Další ukázka",
+      "position": "{index} z {count}"
+    },
+    "items": {
+      "oxoo": {
+        "role": "Audiovizuální umělec",
+        "bio": [
+          "Lukáš Dřevjaný alias „oxoo“ je audiovizuální umělec, jehož tvorba má kořeny v rave undergroundu a pohybuje se na hranici současného digitálního umění. Kombinací prvků abstraktního expresionismu s futuristickou citlivostí vytváří imerzivní vizuální zážitky, které zpochybňují divákovo vnímání reality. Prostřednictvím rezonujících barev a kontrastu zkoumá napětí mezi chaosem a řádem, technologií a lidskostí a posouvá hranice tradičního vizuálního vyprávění."
+        ],
+        "links": {
+          "website": "oxoo.digital",
+          "instagram": "Instagram"
+        },
+        "media": {
+          "terraform": "Terraform – neonově zelené rostlinné tvary na černém pozadí",
+          "fragment": "Fragment – postava před zářící světelnou instalací",
+          "nexus": "Nexus – neonová mřížka ve fialových, modrých a oranžových tónech"
+        }
+      },
+      "done": {
+        "role": "Kodér a herní vývojář, motion & sound designer",
+        "bio": [
+          "Prezentuje projekt **Plantáž** – interaktivní hru o rostlinách v nehostinném prostředí. Fúze Tamagoči a Pokémonů v MMORPG světě (GTA, WoW). Projektem upozorňuje na exponenciální vývoj technologií, změnu klimatického prostředí, absenci socializace a starání se.",
+          "Jeho tvorba klíčí z aplikování nových technologií, se kterými digitální svět prorůstá do reálného. Využívá rozkvět virtuální reality (**VR**), která plně vtáhne do virtuálního prostředí skrze brýle Meta Quest, a rozšířené reality (**AR**), která pomocí kamery uživatele přidá digitální prvky do obrazu zaznamenávajícího okolí.",
+          "**Motion design** – animace je pro něj nosným prostředkem vizuální komunikace k upoutání pozornosti. **Zvukem** vyvolává emocionální ztotožnění s obrazem."
+        ],
+        "links": {
+          "plantaz": "Hra Plantáž",
+          "portfolio": "Motion design portfolio"
+        },
+        "media": {
+          "showreel": "Motion design showreel – Daniel Randus",
+          "plantaz-vr-tracking": "Plantáž – VR tracking: hráčka v brýlích Meta Quest s trackerem na ruce",
+          "plantaz-card": "Plantáž – karta rostliny ze hry"
+        }
+      },
+      "nikita": {
+        "role": "3D generalist, real artist",
+        "bio": [
+          "Umělec studující AVU v ateliéru Intermedia. Využívá vizuální softwary. Modeluje v 3D, VR, AI. Vystavuje pod [@stresservice](https://www.instagram.com/stresservice/)."
+        ],
+        "links": {
+          "instagram": "Instagram"
+        },
+        "media": {
+          "strom": "Strom – stín stromu na stěně v sépiových tónech",
+          "nikita-2": "Šedobílá scéna s postavou ležící mezi větvemi",
+          "nikita-4": "Šedá přízračná rostlinná forma",
+          "nikita-1": "Temná socha z křídel a kostí"
+        }
+      },
+      "slejdy": {
+        "role": "3D digital artist",
+        "bio": [],
+        "links": {
+          "instagram": "Instagram"
+        },
+        "media": {
+          "breathing-forest": "Breathing Forest – postava v džungli plné hub",
+          "launching-robot": "Launching Robot – breakdown z After Effects a Cinema 4D",
+          "awakening": "Awakening – krajina porostlá mechem",
+          "ice-cream-chase": "Ice Cream Chase – izometrická ulice se zmrzlinářským vozem",
+          "imax": "IMAX – animované logo",
+          "jbalvin-making-of": "J Balvin – making-of animace se dvěma postavami",
+          "pantheon-elastic": "Pantheon Elastic – socha v modrém světle",
+          "silly-cubes": "Silly Cubes – tři skleněné kostky s barevnými scénami",
+          "rocket-launch": "Rocket Launch – raketa na startovací rampě"
+        }
+      },
+      "meloon": {
+        "role": "Junior digital artist",
+        "bio": [
+          "Využívá prvky 3D a motion grafiky. Inspirován prací studií ManvsMachine, Signal Creative a Aixsponza. Pracuje v Blenderu, After Effects, Photoshopu, DaVinci Resolve, Houdini a Resolume Arena, s AI nástroji Veo 3 a Kling."
+        ],
+        "links": {
+          "instagram": "Instagram"
+        },
+        "media": {
+          "presents-1": "3D animace: chlupatý žlutý prstenec s chromovanými háčky",
+          "presents-2": "3D animace: chlupatá červená kostka s kovovými detaily",
+          "presents-3": "3D animace: průsvitné pětiúhelníky na modrém pozadí",
+          "presents-4": "3D animace: oranžová voštinová koule",
+          "presents-5": "3D animace: chlupatý modrý šestiúhelník",
+          "presents-6": "3D animace: zářící chlupatý pruh na fialovém pozadí",
+          "presents-7": "3D animace: chlupatá červená koule s geodetickými kopulemi",
+          "presents-8": "3D animace: chlupatý zelený kaktus z mřížky"
+        }
+      },
+      "dari": {
+        "role": "3D character animator",
+        "bio": [],
+        "links": {
+          "instagram": "Instagram"
+        },
+        "media": {
+          "presents-1": "Siluety tančících postav v prosvíceném boxu",
+          "presents-2": "Bílá chlupatá smyčka na černém pozadí",
+          "presents-3": "Bílá chlupatá postavička králíka",
+          "presents-4": "Bílá oblačná postavička v kouři",
+          "memory-of-the-stone": "Memory of the Stone – zkamenělé květy v kameni"
+        }
+      },
+      "jakub": {
+        "role": "Tech lead & product",
+        "bio": [
+          "Jakub je vývojář mobilních aplikací a vytvořil dvě mobilní aplikace pro ovládání fyzického světa – jednu pro chytré domácnosti a druhou pro chytré stáje. Nyní pracuje na vývoji komunitní platformy pro sběr dat o studánkách. Ve volném čase se zaměřuje na vývoj pracovních postupů s AI agenty a provozuje e-shop [notysky.cz](https://notysky.cz/)."
+        ],
+        "links": {
+          "website": "smolikja.team",
+          "github": "GitHub"
+        },
+        "media": {
+          "studanky": "Studánky – mobilní aplikace s mapou a detaily studánek",
+          "staje": "Inteligentní stáj – aplikace pro ovládání ventilace, plachet a světel",
+          "domov": "Domov pod palcem – aplikace pro chytrou domácnost",
+          "servers": "Výpis neofetch ze dvou serverů Mac Pro s Ubuntu",
+          "notysky": "Notýsky – zápisníky z e-shopu notysky.cz"
+        }
+      },
+      "daniel-holas": {
+        "role": "Architekt, lumberjack, dog owner",
+        "bio": [],
+        "links": {
+          "instagram": "Instagram"
+        },
+        "media": {}
+      }
+    }
+  },
+  "benefits": {
+    "title": "Co SKLAD nabízí",
+    "items": {
+      "community": {
+        "title": "Komunita",
+        "text": "Otevřený kolektiv lidí, kteří sdílí zakázky, feedback, repozitáře i experimenty."
+      },
+      "space": {
+        "title": "Zázemí",
+        "text": "Pracovní stůl, rostliny, klid pro fokus i místo na společné dev & motion sessions."
+      },
+      "trial": {
+        "title": "Demo",
+        "text": "První tři dny máš zdarma, potom můžeš pokračovat nezávazným demo měsícem a zjistit, jestli ti členství sedí."
+      },
+      "flow": {
+        "title": "Flow",
+        "text": "Workflow s AI agenty, realtime vizualizace, audiovizuální instalace i prototypování nástrojů."
+      },
+      "location": {
+        "title": "Smíchov",
+        "text": "Arbesovo náměstí je plné kaváren, restaurací i obchodů potřebných pro běžný denní provoz. Plus Anděl za rohem."
+      }
+    }
+  },
+  "community": {
+    "title": "Komunita online",
+    "text": "Snažíme se fotit, sdílet proces, kód i pluginy a plánovat akce. Přidej se tam, kde jsme nejvíc aktivní.",
+    "instagram": {
+      "title": "Instagram",
+      "text": "Střípky ze studia a aktuality.",
+      "action": "Otevřít profil"
+    },
+    "discord": {
+      "title": "Discord",
+      "text": "Komunitní chat, sdílené zdroje, kód, rychlé feedbacky i domluva na sessions.",
+      "action": "Připojit se"
+    }
+  },
+  "faq": {
+    "title": "Časté otázky",
+    "items": [
+      {
+        "question": "Jak probíhá přihláška?",
+        "answer": "Vyplň formulář, ozveme se ti a domluvíme prohlídku. Na místě zjistíš, zda ti prostor sedí."
+      },
+      {
+        "question": "Co získám v rámci členství?",
+        "answer": "Vyhrazený stůl, židli, regál, klíče pro 24/7 vstup, kuchyňku a toalety."
+      },
+      {
+        "question": "Jaká je cena?",
+        "answer": "Členství stojí 5 000 Kč měsíčně. Platbu řešíme vždy na začátku období."
+      },
+      {
+        "question": "Nabízíte zkušební období?",
+        "answer": "Ano. Přijď na tři dny zdarma, vyzkoušej, jak ti sedí prostor i komunita, a pokud chceš pokračovat, nabídneme ti nezávazný demo měsíc."
+      },
+      {
+        "question": "Musím mít vlastní stůl?",
+        "answer": "Pokud stůl nemáš, máme připravené stoly k zapůjčení. Přines si vlastní techniku."
+      },
+      {
+        "question": "Můžu sdílet portfolio?",
+        "answer": "Jasně. Pošli videa a vizuály, které chceš mít na webu."
+      },
+      {
+        "question": "Vývojář SW – patřím do SKLADu?",
+        "answer": "Rozhodně. V komunitě jsou vývojáři aplikací a lidé, kteří staví interaktivní instalace a vlastní nástroje. Spolupráce mezi disciplínami je to, co nás baví."
+      }
+    ]
+  },
+  "callout": {
+    "title": "Přijď na prohlídku",
+    "text": "Chceš zjistit, jestli ti SKLAD sedí? Ozvi se přes krátkou přihlášku a domluvíme termín.",
+    "apply": "Vyplnit přihlášku"
+  },
+  "footer": {
+    "aria": "Patička",
+    "navTitle": "Navigace",
+    "communityTitle": "Komunita",
+    "applyTitle": "Přihláška",
+    "apply": "Chci do SKLADu",
+    "copyright": "© {year} SKLAD. Všechna práva vyhrazena.",
+    "credit": "Web vytvořil {name}"
+  },
+  "notFound": {
+    "title": "Tahle stránka ve SKLADu není",
+    "description": "Odkaz je nejspíš zastaralý nebo je v něm překlep. Pokračuj na úvodní stránku.",
+    "backHome": "Zpět na úvod"
+  }
+}

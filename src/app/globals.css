@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* The logo's three subpixels. Reserved for the mark and the hero photo. */
+  --color-subpixel-r: var(--subpixel-r);
+  --color-subpixel-g: var(--subpixel-g);
+  --color-subpixel-b: var(--subpixel-b);
+
+  --animate-converge-r: converge-r 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  --animate-converge-b: converge-b 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+
+  @keyframes converge-r {
+    from {
+      transform: translate3d(-1.25rem, 0, 0);
+    }
+  }
+  @keyframes converge-b {
+    from {
+      transform: translate3d(1.25rem, 0, 0);
+    }
+  }
+}
+
+/*
+ * Single dark theme. The page is a screening room: true black, so the members'
+ * renders and letterboxed videos sit on it without a visible frame. Concrete
+ * greys lift the few raised surfaces (menu, lightbox, panels); the brand's
+ * mint is the one interactive colour. Muted text on black is 8.9:1 and black
+ * on mint 17:1.
+ * `--radius` 0.625rem echoes the rounded corners of the logo's subpixels.
+ */
+:root {
+  color-scheme: dark;
+  --background: oklch(0 0 0);
+  --foreground: oklch(0.955 0.006 170);
+  --card: oklch(0.185 0.006 170);
+  --card-foreground: oklch(0.955 0.006 170);
+  --popover: oklch(0.185 0.006 170);
+  --popover-foreground: oklch(0.955 0.006 170);
+  --primary: oklch(0.925 0.135 175);
+  --primary-foreground: oklch(0 0 0);
+  --secondary: oklch(0.185 0.006 170);
+  --secondary-foreground: oklch(0.955 0.006 170);
+  --muted: oklch(0.185 0.006 170);
+  --muted-foreground: oklch(0.74 0.012 170);
+  --accent: oklch(0.24 0.008 170);
+  --accent-foreground: oklch(0.955 0.006 170);
+  --destructive: oklch(0.65 0.2 25);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.925 0.135 175);
+  --radius: 0.625rem;
+
+  --subpixel-r: #ff0000;
+  --subpixel-g: #00ff00;
+  --subpixel-b: #0c00ff;
+}
+
+/* Archivo's width axis carries the hierarchy: expanded for section titles. */
+@utility font-display {
+  font-stretch: 125%;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply scroll-smooth font-sans;
+  }
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}

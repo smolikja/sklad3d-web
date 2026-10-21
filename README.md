@@ -1,29 +1,68 @@
-# SKLAD.digital Website
+# sklad.digital
 
-A static, data-driven site for the SKLAD creative space in Prague. Content (members, benefits, FAQ) is stored in JSON and rendered into HTML/CSS/JS at build time.
+Website of SKLAD — a shared studio and collective for 3D, motion, audiovisual
+and software creators in Prague-Smíchov. A single localized landing page
+(`/cs`, `/en`) that explains how membership works, introduces the members and
+their work, lists what the studio offers, links the community channels,
+answers common questions and invites visitors to apply for a tour.
 
-## Getting Started
+The application uses the Next.js App Router, React, TypeScript, Tailwind CSS
+and shadcn on Base UI, managed with pnpm. `package.json` is the source of truth
+for framework and dependency versions;
+[`docs/stack-blueprint.md`](docs/stack-blueprint.md) explains the intent
+behind them.
 
-- Requirements: Node.js 18+ and Python 3 (for a quick local server).
-- Install dependencies: `npm install` (none beyond core Node, but keeps scripts available).
-- Build the site: `npm run build` → generates `index.html`, `styles/main.css`, and copies JS modules to `scripts/`.
+## Documentation
 
-## Develop & Preview
+- [Architecture](docs/architecture.md) — routes, component boundaries, data
+  flow, styling and source-code ownership.
+- [Web assets](docs/assets.md) — where photos, posters and videos live, how to
+  prepare them, and how to add a member.
+- [Localization](docs/localization.md) — typed catalogs, member copy, adding a
+  locale and locale-aware routing.
+- [Deployment](docs/deployment.md) — standalone build, Coolify/Nixpacks
+  configuration and release checks.
+- [Stack blueprint](docs/stack-blueprint.md) — the toolchain and conventions
+  shared with the sister projects.
 
-- After building, start a static server from the repo root: `python3 -m http.server 4173` and open `http://localhost:4173`.
-- Edit content in `src/data/` (`members.json`, `benefits.json`, `faq.json`), layout in `src/templates/` and `src/partials/`, scripts in `src/js/`, styles in `src/styles/`. Re-run `npm run build` to regenerate outputs.
+## Requirements
 
-## Project Structure
+- Node.js `>=24.0.0` (see `.nvmrc`)
+- pnpm 12, pinned by the `packageManager` field in `package.json`
+- Corepack, recommended for activating the pinned pnpm version
 
-- `src/templates/layout.html` – page shell with placeholders.
-- `src/partials/` – shared sections (hero, about, community, callout, footer, lightbox, scripts).
-- `src/data/` – structured content driving members/benefits/FAQ.
-- `src/js/` – modular ES modules per feature (nav, carousel, lightbox, autoplay, etc.); `main.js` orchestrates.
-- `src/styles/` – layered CSS (tokens, layout, components, sections, lightbox, responsive, utilities).
-- `scripts/build.js` – composes HTML from data/partials, concatenates CSS layers, copies JS to `scripts/`.
-- `assets/` – images and media referenced by the site.
+## Local development
 
-## Notes
+```bash
+corepack enable
+pnpm install
+pnpm dev
+```
 
-- The site must be opened via HTTP (not `file://`) because ES modules are loaded with `type="module"`.
-- Videos default to muted/autoplay on scroll via IntersectionObserver; lightbox reuses existing media sources and un-mutes in the dialog.
+Open [http://localhost:3000](http://localhost:3000). The bare `/` redirects to
+`/cs` or `/en`. No environment variables are needed.
+
+## Commands
+
+| Command | Purpose |
+| --- | --- |
+| `pnpm dev` | Start the development server. |
+| `pnpm build` | Create a production build. |
+| `pnpm start` | Run a regular production build locally. |
+| `pnpm lint` | Run ESLint. |
+| `pnpm typecheck` | Run TypeScript without emitting files. |
+| `pnpm test` | Run the Vitest suite once. |
+| `pnpm docs:check` | Validate relative links in project Markdown files. |
+| `pnpm check` | Run lint, type checking, tests and documentation validation. |
+
+## Architecture at a glance
+
+- `src/app/` owns the localized page, metadata, structured data, the share
+  image and the global 404.
+- Server Components are the default. Small client islands own the mobile menu,
+  the member galleries with their lightbox and video previews, and the FAQ
+  accordion.
+- `src/config/` holds structural data — site links, address, members and their
+  media; `messages/` holds the copy in Czech and English.
+- `public/images/` holds member photos, video posters and the studio photo;
+  videos stay on the media host. See [Web assets](docs/assets.md).
