@@ -10,6 +10,9 @@ nixPkgs = ["nodejs_24"]
 
 [phases.install]
 cmds = [
+  # The Corepack bundled with Nixpacks' Node.js predates pnpm 11 and looks
+  # for a `bin/pnpm.cjs` that pnpm 11+ no longer ships.
+  "npm install --global corepack@0.34.7",
   "corepack enable",
   "corepack prepare pnpm@12.4.1 --activate",
   "pnpm install --frozen-lockfile",

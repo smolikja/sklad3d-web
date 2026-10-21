@@ -10,7 +10,8 @@ together and what to verify around a release.
 `next.config.ts` enables `output: "standalone"`. `nixpacks.toml`:
 
 1. installs Node.js 24;
-2. activates the pnpm version pinned in `package.json` through Corepack;
+2. updates Corepack and activates the pnpm version pinned in `package.json`
+   through it;
 3. installs dependencies with the frozen lockfile;
 4. runs `pnpm build`;
 5. copies `public/` and `.next/static/` into the standalone output; and
@@ -24,6 +25,13 @@ command.
 The pnpm version in `nixpacks.toml` (`corepack prepare pnpm@…`) must equal the
 `packageManager` field in `package.json`; otherwise Corepack aborts the build.
 Bump both together.
+
+The Node.js that Nixpacks installs (24.10 at the time of writing) bundles
+Corepack 0.34.0, which only knows the `bin/pnpm.cjs` entry point of pnpm 6–10.
+pnpm 11 and later ship `bin/pnpm.mjs`, so with the bundled Corepack the build
+fails with `Cannot find module '…/corepack/v1/pnpm/<version>/bin/pnpm.cjs'`.
+`nixpacks.toml` therefore installs Corepack 0.34.7 first, the newest release
+whose `engines` still accept every Node.js 24 (0.35 and later require 24.15).
 
 A server (rather than a static export) is needed for two things: the locale
 redirect of `/` in `src/proxy.ts` and the image optimizer behind `next/image`,
