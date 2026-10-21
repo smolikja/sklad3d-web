@@ -14,11 +14,15 @@ export function mediaSize(item: MemberMedia): { width: number; height: number } 
   return item.kind === "image" ? item : item.poster;
 }
 
-/** `sizes` for a gallery slide: its rendered width at each row height. */
+/**
+ * `sizes` for a gallery slide: its rendered width at each row height. On
+ * phones a wide piece is capped at the content column (viewport minus the
+ * 1.25rem gutters).
+ */
 export function slideSizes(item: MemberMedia): string {
   const { width, height } = mediaSize(item);
   const at = (rowHeight: number) => Math.round((rowHeight * width) / height);
-  return `(min-width: 1024px) ${at(ROW_HEIGHT.lg)}px, (min-width: 640px) ${at(ROW_HEIGHT.sm)}px, min(${at(ROW_HEIGHT.base)}px, 85vw)`;
+  return `(min-width: 1024px) ${at(ROW_HEIGHT.lg)}px, (min-width: 640px) ${at(ROW_HEIGHT.sm)}px, min(${at(ROW_HEIGHT.base)}px, calc(100vw - 2.5rem))`;
 }
 
 /**

@@ -79,6 +79,13 @@ logo's `--subpixel-r/g/b`, which are reserved for the mark and the hero photo.
 Components use semantic utilities (`bg-card`, `text-muted-foreground`,
 `bg-primary`) — never raw colours.
 
+The page column is three tokens in `globals.css`: `--page-max`,
+`--page-gutter` and the derived `--page-inset` (viewport edge to column
+edge). The container uses the first two; the member galleries break out to
+the full window width and pad by `--page-inset`, so they scroll under both
+window edges while their first, last and resting pieces line up with the
+column.
+
 Type is one variable family, Archivo (`src/lib/fonts.ts`); its width axis
 carries the hierarchy — `font-display` (125 % width, 800) for section titles,
 112 % for the hero and card titles, normal width for reading text. Primary

@@ -86,6 +86,19 @@
   --subpixel-r: #ff0000;
   --subpixel-g: #00ff00;
   --subpixel-b: #0c00ff;
+
+  /*
+   * Page column. `--page-inset` is the distance from the viewport edge to the
+   * content column; full-bleed rows (the member galleries) pad by it so their
+   * first and last item line up with the text above them.
+   */
+  --page-max: 80rem;
+  --page-gutter: 1.25rem;
+  --page-inset: max(var(--page-gutter), calc((100vw - var(--page-max)) / 2 + var(--page-gutter)));
+
+  @variant sm {
+    --page-gutter: 2rem;
+  }
 }
 
 /* Archivo's width axis carries the hierarchy: expanded for section titles. */

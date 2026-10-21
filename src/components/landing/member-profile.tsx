@@ -9,7 +9,7 @@ import { RichText } from "./rich-text";
 
 /**
  * One member: portrait, name, role and links, the bio beside them, and their
- * work in a gallery that runs past the content column to the viewport edge.
+ * work in a full-bleed gallery below.
  */
 export function MemberProfile({
   member,
@@ -77,7 +77,7 @@ export function MemberProfile({
       </div>
 
       {member.media.length > 0 ? (
-        <div className="mt-10 -mr-5 sm:mt-12 sm:mr-[calc(-1*max(2rem,(100vw-80rem)/2+2rem))]">
+        <div className="mt-10 sm:mt-12">
           <MemberGallery
             media={member.media}
             descriptions={copy.media}

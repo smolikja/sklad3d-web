@@ -25,9 +25,14 @@ type GalleryCopy = Dictionary["members"]["gallery"];
 
 /**
  * A member's work as one row at a fixed height, each piece at its own aspect
- * ratio so nothing is cropped. The row responds to drag, touch, trackpad and
- * arrow keys; a piece opens full screen in the lightbox. Videos preview
- * silently while visible (see `ShowcaseVideo`).
+ * ratio so nothing is cropped. A piece opens full screen in the lightbox;
+ * videos preview silently while visible (see `ShowcaseVideo`).
+ *
+ * The row is full-bleed: it scrolls under both edges of the window instead of
+ * being cut off at the content column, while its first and last piece — and
+ * every piece it comes to rest on — line up with the column's edge
+ * (`--page-inset`). Embla measures the start inset from the track's padding
+ * and the end inset from the last slide's margin, so the two are set that way.
  */
 export function MemberGallery({
   media,
@@ -44,24 +49,38 @@ export function MemberGallery({
 }) {
   const [api, setApi] = useState<CarouselApi>();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [plugins] = useState(() => [WheelGesturesPlugin()]);
+  const track = useRef<HTMLDivElement>(null);
   const slideButtons = useRef<(HTMLButtonElement | null)[]>([]);
 
+  // Pieces come to rest on the content column's edge, not the window's.
+  // Read on every (re)init, so it follows the inset across breakpoints.
+  const align = useCallback(() => {
+    const node = track.current;
+    return node ? parseFloat(getComputedStyle(node).paddingInlineStart) || 0 : 0;
+  }, []);
+
   const closeLightbox = () => {
-    // Leave the row on the piece that was last viewed.
-    if (openIndex !== null) api?.scrollTo(openIndex);
+    // Leave the row on the piece that was viewed last. Near the end several
+    // pieces share one resting position, so map the piece to its snap.
+    if (openIndex !== null && api) {
+      const snap = api.internalEngine().slideRegistry.findIndex((group) => group.includes(openIndex));
+      if (snap >= 0) api.scrollTo(snap);
+    }
     setOpenIndex(null);
   };
 
   return (
-    <>
+    <div className="mx-[calc(-1*var(--page-inset))]">
       <Carousel
         setApi={setApi}
-        opts={{ align: "start", containScroll: "trimSnaps", dragFree: true }}
-        plugins={[WheelGesturesPlugin()]}
+        opts={{ align, containScroll: "trimSnaps", skipSnaps: true }}
+        plugins={plugins}
         aria-label={label}
-        className="flex flex-col gap-5"
+        className="flex flex-col gap-4"
       >
-        <CarouselContent className="-ml-3 sm:-ml-4">
+        {/* Vertical padding keeps the focus ring clear of the viewport's clipping. */}
+        <CarouselContent ref={track} className="ml-0 gap-3 py-1.5 ps-(--page-inset) sm:gap-4">
           {media.map((item, index) => {
             const { width, height } = mediaSize(item);
             const description = descriptions[item.id];
@@ -69,7 +88,7 @@ export function MemberGallery({
               <CarouselItem
                 key={item.id}
                 aria-label={format(copy.slide, { index: index + 1, count: media.length })}
-                className="basis-auto pl-3 sm:pl-4"
+                className="basis-auto pl-0 last:me-(--page-inset)"
               >
                 <button
                   ref={(element) => {
@@ -79,7 +98,7 @@ export function MemberGallery({
                   onClick={() => setOpenIndex(index)}
                   aria-label={format(copy.open, { description })}
                   style={{ aspectRatio: `${width} / ${height}` }}
-                  className="group relative block h-72 max-w-[85vw] cursor-zoom-in overflow-hidden rounded-xl bg-card outline-none focus-visible:ring-3 focus-visible:ring-ring sm:h-96 lg:h-[28rem]"
+                  className="relative block h-72 max-w-[calc(100vw-2*var(--page-inset))] cursor-zoom-in overflow-hidden rounded-xl bg-card outline-none focus-visible:ring-3 focus-visible:ring-ring sm:h-96 lg:h-[28rem]"
                 >
                   {item.kind === "image" ? (
                     <Image
@@ -120,13 +139,14 @@ export function MemberGallery({
         returnFocus={(index) => slideButtons.current[index] ?? null}
         copy={lightboxCopy}
       />
-    </>
+    </div>
   );
 }
 
 /**
- * Previous/next buttons and a progress line under the row. Hidden when the
- * whole row fits on screen and there is nothing to scroll.
+ * A progress line and previous/next buttons under the row, on the content
+ * column. Hidden when the whole row fits on screen and there is nothing to
+ * scroll; swiping is never the only way through the work.
  */
 function GalleryControls({ copy }: { copy: GalleryCopy }) {
   const { api, canScrollPrev, canScrollNext } = useCarousel();
@@ -153,14 +173,16 @@ function GalleryControls({ copy }: { copy: GalleryCopy }) {
   if (!canScrollPrev && !canScrollNext) return null;
 
   return (
-    <div className="flex items-center gap-4 pr-5 sm:pr-8">
-      <CarouselPrevious aria-label={copy.previous} size="icon-lg" className="static size-11 translate-y-0 rounded-lg" />
-      <CarouselNext aria-label={copy.next} size="icon-lg" className="static size-11 translate-y-0 rounded-lg" />
-      <div aria-hidden="true" className="relative ml-2 h-px max-w-xs flex-1 bg-border">
+    <div className="flex items-center gap-6 px-(--page-inset)">
+      <div aria-hidden="true" className="relative h-px max-w-xs flex-1 bg-border">
         <div
           className="absolute inset-y-0 left-0 w-full origin-left bg-foreground"
           style={{ transform: `scaleX(${Math.max(progress, 0.04)})` }}
         />
+      </div>
+      <div className="ml-auto flex gap-2">
+        <CarouselPrevious aria-label={copy.previous} size="icon-lg" className="static size-11 translate-y-0 rounded-lg" />
+        <CarouselNext aria-label={copy.next} size="icon-lg" className="static size-11 translate-y-0 rounded-lg" />
       </div>
     </div>
   );

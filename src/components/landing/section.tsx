@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
-/** Page width and side padding shared by every band of the page. */
-export const containerClassName = "mx-auto w-full max-w-7xl px-5 sm:px-8";
+/** Page width and side padding shared by every band of the page (tokens in globals.css). */
+export const containerClassName = "mx-auto w-full max-w-(--page-max) px-(--page-gutter)";
 
 /**
  * A content band below the hero: a hairline on top, generous vertical rhythm,

@@ -15,8 +15,8 @@ export function MembersSection({ copy }: { copy: Dictionary["members"] }) {
     <Section id="members" labelledBy="members-title" className="overflow-x-clip pb-0 sm:pb-0">
       <SectionHeading id="members-title" title={copy.title} text={copy.text} />
 
-      <nav aria-label={copy.rosterAria} className="mt-10 -mr-5 sm:mr-0">
-        <ul className="flex gap-2 overflow-x-auto pr-5 pb-2 [scrollbar-width:none] sm:flex-wrap sm:overflow-visible sm:pr-0">
+      <nav aria-label={copy.rosterAria} className="mt-10 -mr-(--page-gutter) sm:mr-0">
+        <ul className="flex gap-2 overflow-x-auto pr-(--page-gutter) pb-2 [scrollbar-width:none] sm:flex-wrap sm:overflow-visible sm:pr-0">
           {members.map((member) => (
             <li key={member.id} className="shrink-0">
               <a
