@@ -5,7 +5,7 @@
  */
 export const siteConfig = {
   name: "SKLAD",
-  url: "https://sklad.digital",
+  url: "https://sklad3d.cz",
   /** Every "apply" action leads to this form — it is also the tour booking. */
   applyHref: "https://forms.gle/EsspyQexMK8yMAE37",
   links: {

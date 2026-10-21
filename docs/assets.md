@@ -30,7 +30,7 @@ uses it to size each slide so nothing is cropped.
   2560 px source is never sent to a phone. Files under `public/` are plain
   static files; no page code runs for them.
 - **They help search.** Photos on the site's own domain are attributed to
-  `sklad.digital` in image search and are listed in `sitemap.xml` next to the
+  `sklad3d.cz` in image search and are listed in `sitemap.xml` next to the
   page.
 - **Videos are the exception.** They are tens of megabytes, are streamed with
   range requests and change independently of the site, so they would only

@@ -34,10 +34,14 @@ Coolify settings:
 
 | Setting | Value |
 | --- | --- |
+| Source | GitHub repository `smolikja/sklad3d-web`, branch `main` |
+| Automatic deployment | Enabled — Coolify builds on every push; there is no GitHub Actions workflow |
 | Build pack | Nixpacks |
 | Build / start command | Not set in Coolify — they come from `nixpacks.toml` |
 | Exposed port | `3000` |
 | Static site | Disabled |
+| Domains | `https://sklad3d.cz,https://www.sklad3d.cz` |
+| Direction | Redirect to non-www |
 | Health check | Coolify default container check (there is no `/health` route) |
 | Runtime environment | None required |
 
@@ -45,8 +49,10 @@ Coolify settings:
 
 `siteConfig.url` (`src/config/site.ts`) is the canonical origin used by
 metadata, the sitemap, `robots.txt`, structured data and the share image.
-Point `sklad.digital` at the Coolify service before launch, and redirect any
-other host (for example `www.`) to it.
+The site lives at `sklad3d.cz`. Point the DNS records of `sklad3d.cz` and
+`www.sklad3d.cz` at the Coolify server; Coolify issues the certificates and
+redirects `www.` to the bare domain. If the canonical domain ever changes,
+change `siteConfig.url` together with the Coolify domains.
 
 ## Pre-deploy checks
 
@@ -80,3 +86,8 @@ other host (for example `www.`) to it.
 Until 2026-10 the site was a static `index.html` composed from HTML partials by
 `scripts/build.js`, with member images hot-linked from the media host. The
 rewrite moved it to this stack and the images into `public/images/`.
+
+The old site ran at `sklad.digital` and was deployed over SSH by a GitHub
+Actions workflow, removed in 2025. With the rewrite the site moved to
+`sklad3d.cz` and deployment moved entirely to Coolify; the old domain is no
+longer registered.

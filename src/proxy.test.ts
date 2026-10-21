@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 
 import { config, proxy } from "./proxy";
 
-const ORIGIN = "https://sklad.digital";
+const ORIGIN = "https://sklad3d.cz";
 
 describe("proxy matcher", () => {
   it.each(["/", "/cs", "/en", "/unknown", "/cs/unknown"])(

@@ -1,4 +1,4 @@
-# sklad.digital
+# sklad3d.cz
 
 Website of SKLAD — a shared studio and collective for 3D, motion, audiovisual
 and software creators in Prague-Smíchov. A single localized landing page
