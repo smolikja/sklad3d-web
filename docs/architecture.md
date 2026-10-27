@@ -86,6 +86,11 @@ the full window width and pad by `--page-inset`, so they scroll under both
 window edges while their first, last and resting pieces line up with the
 column.
 
+Every section, the hero included, is at least one full screen tall
+(`min-h-lvh`; the sticky header is not subtracted) with its content vertically
+centred, so each topic gets its own screen. Longer sections, such as the
+members, simply grow.
+
 Type is one variable family, Archivo (`src/lib/fonts.ts`); its width axis
 carries the hierarchy — `font-display` (125 % width, 800) for section titles,
 112 % for the hero and card titles, normal width for reading text. Primary

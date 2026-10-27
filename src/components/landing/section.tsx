@@ -5,7 +5,11 @@ export const containerClassName = "mx-auto w-full max-w-(--page-max) px-(--page-
 
 /**
  * A content band below the hero: a hairline on top, generous vertical rhythm,
- * and an anchor offset that clears the sticky header.
+ * and an anchor offset that clears the sticky header. It is at least one full
+ * screen tall, with its content vertically centred, so every topic gets its
+ * own screen and long ones simply grow. `lvh` is the
+ * largest viewport height, so a section still fills the screen when a mobile
+ * browser hides its toolbar.
  */
 export function Section({
   id,
@@ -23,7 +27,10 @@ export function Section({
     <section
       id={id}
       aria-labelledby={labelledBy}
-      className={cn("scroll-mt-16 border-t py-20 sm:py-28", className)}
+      className={cn(
+        "flex min-h-lvh scroll-mt-16 flex-col justify-center border-t py-20 sm:py-28",
+        className,
+      )}
     >
       <div className={containerClassName}>{children}</div>
     </section>

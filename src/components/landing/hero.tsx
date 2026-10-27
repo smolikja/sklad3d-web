@@ -34,7 +34,7 @@ export function Hero({ copy, place }: { copy: Dictionary["hero"]; place: Diction
   ];
 
   return (
-    <section className={`${containerClassName} grid grid-cols-[minmax(0,1fr)] gap-12 pt-10 pb-20 sm:pt-16 lg:min-h-[calc(100dvh-4rem)] lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-center lg:gap-16 lg:py-16`}>
+    <section className={`${containerClassName} grid min-h-lvh grid-cols-[minmax(0,1fr)] content-center gap-12 pt-10 pb-20 sm:pt-16 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-center lg:gap-16 lg:py-16`}>
       <div className="flex flex-col gap-8">
         <h1 className="text-[2.375rem] leading-[1.04] font-bold tracking-[-0.03em] text-balance font-stretch-[112%] sm:text-[3.25rem] xl:text-[3.75rem]">
           {copy.title}
