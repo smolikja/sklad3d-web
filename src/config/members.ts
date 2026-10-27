@@ -47,7 +47,7 @@ type MemberConfig = {
 };
 
 const IMAGE_ROOT = "/images/members";
-const VIDEO_ROOT = "https://smolikja.team/assets/sklad-digital/members";
+const VIDEO_ROOT = "https://smolikja.team/assets/sklad3d/members";
 
 function avatar(member: string, width: number, height: number): ImageAsset {
   return { src: `${IMAGE_ROOT}/${member}/avatar.jpg`, width, height };
@@ -109,16 +109,20 @@ const memberList = [
     ],
   },
   {
-    id: "nikita",
-    name: "Nikita Kutimskij",
-    nickname: "AMT",
-    avatar: avatar("nikita", 1080, 1080),
-    links: [{ id: "instagram", href: "https://www.instagram.com/amt________________/" }],
+    id: "jakub",
+    name: "Jakub Smolík",
+    nickname: "smolikja",
+    avatar: avatar("jakub", 1080, 1080),
+    links: [
+      { id: "website", href: "https://smolikja.team/" },
+      { id: "github", href: "https://github.com/smolikja" },
+    ],
     media: [
-      video("nikita", "strom", "nikita/showcase/nikita-strom.mp4", 1920, 1080),
-      image("nikita", "nikita-2", "nikita-2.jpg", 1920, 1200),
-      image("nikita", "nikita-4", "nikita-4.jpg", 1080, 1080),
-      image("nikita", "nikita-1", "nikita-1.jpg", 834, 600),
+      image("jakub", "studanky", "studanky.jpg", 2560, 1440),
+      image("jakub", "staje", "staje.jpg", 2560, 1440),
+      image("jakub", "domov", "domov.jpg", 2560, 1440),
+      image("jakub", "servers", "servers.jpg", 2560, 1440),
+      image("jakub", "notysky", "notysky.jpg", 2560, 1440),
     ],
   },
   {
@@ -146,6 +150,48 @@ const memberList = [
     ],
   },
   {
+    id: "jacox",
+    name: "Jakub Novák",
+    nickname: "Jacox",
+    avatar: avatar("jacox", 1080, 1080),
+    links: [
+      { id: "website", href: "https://jacox.cz/" },
+      { id: "youtube", href: "https://www.youtube.com/@JacoxNovak" },
+      { id: "instagram", href: "https://www.instagram.com/thejacox/" },
+    ],
+    media: [
+      video("jacox", "presents-1", "jacox/showcase/Jacox_presents_1.mp4", 1920, 1080),
+      video("jacox", "presents-2", "jacox/showcase/Jacox_presents_2.mp4", 1440, 1080),
+    ],
+  },
+  {
+    id: "jakub-spacek",
+    name: "Jakub Špaček",
+    avatar: avatar("jakub-spacek", 1080, 1080),
+    links: [
+      { id: "website", href: "https://jakubspacek.com/" },
+      { id: "instagram", href: "https://www.instagram.com/spaczech90/" },
+    ],
+    media: [video("jakub-spacek", "presents", "jakubspacek/showcase/spacek_presents.mp4", 1920, 878)],
+  },
+  {
+    id: "sara",
+    name: "Sára Hohlová",
+    avatar: avatar("sara", 1080, 1080),
+    links: [
+      { id: "portfolio", href: "https://sarahohlova.cargo.site/" },
+      { id: "instagram", href: "https://www.instagram.com/sarahohlova/" },
+    ],
+    media: [
+      video("sara", "presents-1", "sara/showcase/Sara_presents_1.mp4", 2048, 956),
+      video("sara", "presents-2", "sara/showcase/sara_presents_2.mp4", 1920, 1080),
+      image("sara", "presents-3", "presents-3.jpg", 1170, 1558),
+      image("sara", "presents-4", "presents-4.jpg", 1200, 800),
+      image("sara", "presents-5", "presents-5.jpg", 1170, 780),
+      image("sara", "presents-6", "presents-6.jpg", 1170, 658),
+    ],
+  },
+  {
     id: "meloon",
     name: "Matěj Meloun",
     nickname: "MELOON",
@@ -154,6 +200,19 @@ const memberList = [
     media: [2, 1, 5, 7, 8, 4, 6, 3].map((n) =>
       video("meloon", `presents-${n}`, `meloon/showcase/Meloon_presents_${n}.mp4`, 1440, 1920),
     ),
+  },
+  {
+    id: "nikita",
+    name: "Nikita Kutimskij",
+    nickname: "AMT",
+    avatar: avatar("nikita", 1080, 1080),
+    links: [{ id: "instagram", href: "https://www.instagram.com/amt________________/" }],
+    media: [
+      video("nikita", "strom", "nikita/showcase/nikita-strom.mp4", 1920, 1080),
+      image("nikita", "nikita-2", "nikita-2.jpg", 1920, 1200),
+      image("nikita", "nikita-4", "nikita-4.jpg", 1080, 1080),
+      image("nikita", "nikita-1", "nikita-1.jpg", 834, 600),
+    ],
   },
   {
     id: "dari",
@@ -167,23 +226,6 @@ const memberList = [
       video("dari", "presents-1", "dari/showcase/Dari_presents_1.mp4", 1080, 1920),
       video("dari", "presents-4", "dari/showcase/Dari_presents_4.mp4", 1470, 1968),
       image("dari", "memory-of-the-stone", "memory-of-the-stone.jpg", 1804, 2320),
-    ],
-  },
-  {
-    id: "jakub",
-    name: "Jakub Smolík",
-    nickname: "smolikja",
-    avatar: avatar("jakub", 1080, 1080),
-    links: [
-      { id: "website", href: "https://smolikja.team/" },
-      { id: "github", href: "https://github.com/smolikja" },
-    ],
-    media: [
-      image("jakub", "studanky", "studanky.jpg", 2560, 1440),
-      image("jakub", "staje", "staje.jpg", 2560, 1440),
-      image("jakub", "domov", "domov.jpg", 2560, 1440),
-      image("jakub", "servers", "servers.jpg", 2560, 1440),
-      image("jakub", "notysky", "notysky.jpg", 2560, 1440),
     ],
   },
   {

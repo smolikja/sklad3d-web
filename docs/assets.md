@@ -11,12 +11,18 @@ each kind of file goes, how to prepare it and why the split looks like this.
 | Member portrait | `public/images/members/<id>/avatar.jpg` | `src/config/members.ts` (`avatar(...)`) |
 | Member still (render, photo, screenshot) | `public/images/members/<id>/work/<slug>.jpg` | `src/config/members.ts` (`image(...)`) |
 | Video poster (one frame of the video) | `public/images/members/<id>/posters/<media-id>.jpg` | `src/config/members.ts` (`video(...)`) |
-| Video | media host, `https://smolikja.team/assets/sklad-digital/members/<id>/showcase/<file>.mp4` | `src/config/members.ts` (`video(...)`) |
+| Video | media host, `https://smolikja.team/assets/sklad3d/members/<folder>/showcase/<file>.mp4` | `src/config/members.ts` (`video(...)`) |
 | Studio photo (hero, share image, structured data) | `public/images/space/studio.jpg` | `src/config/assets.ts` |
 | Logo | `public/brand/logo.svg`, inlined as `src/components/icons/sklad-logo.tsx` | `src/config/assets.ts` |
 | PWA icons | `public/brand/icon-192.png`, `icon-512.png`, `icon-512-maskable.png` | `src/config/assets.ts` |
 | Favicons | `src/app/favicon.ico`, `icon.png`, `apple-icon.png` | Next.js file conventions |
 | Share-image fonts | `src/lib/og/archivo-*.woff` | `src/lib/og/og-image.tsx` |
+
+`<folder>` is the member's folder on the media host. It usually equals the
+member id, but not always (`dan` holds `daniel-holas`, `jakubspacek` holds
+`jakub-spacek`), which is why `video(...)` takes the full path. The host also
+keeps each member's original portrait next to `showcase/`; the copy in
+`public/` is the one the site serves.
 
 Every image is registered with its intrinsic pixel size. `next/image` uses it
 for the aspect ratio (no layout shift) and the responsive `srcset`; the gallery
@@ -77,8 +83,9 @@ optimized variants and browser caches are keyed by URL.
    ffmpeg -ss 1 -i <file>.mp4 -frames:v 1 -q:v 3 public/images/members/<id>/posters/<media-id>.jpg
    ```
 
-4. Add `video("<id>", "<media-id>", "<id>/showcase/<file>.mp4", width, height)`
-   to the member's `media` in `src/config/members.ts`.
+4. Add `video("<id>", "<media-id>", "<folder>/showcase/<file>.mp4", width, height)`
+   to the member's `media` in `src/config/members.ts`. File names on the host
+   are case-sensitive.
 
 Inline previews are muted, load nothing until they scroll into view, play only
 while visible and do not autoplay for visitors who prefer reduced motion or

@@ -118,19 +118,21 @@
           "plantaz-card": "Plantáž – karta rostliny ze hry"
         }
       },
-      "nikita": {
-        "role": "3D generalist, real artist",
+      "jakub": {
+        "role": "Tech lead & product",
         "bio": [
-          "Umělec studující AVU v ateliéru Intermedia. Využívá vizuální softwary. Modeluje v 3D, VR, AI. Vystavuje pod [@stresservice](https://www.instagram.com/stresservice/)."
+          "Jakub je vývojář mobilních aplikací a vytvořil dvě mobilní aplikace pro ovládání fyzického světa – jednu pro chytré domácnosti a druhou pro chytré stáje. Nyní pracuje na vývoji komunitní platformy pro sběr dat o studánkách. Ve volném čase se zaměřuje na vývoj pracovních postupů s AI agenty a provozuje e-shop [notysky.cz](https://notysky.cz/)."
         ],
         "links": {
-          "instagram": "Instagram"
+          "website": "smolikja.team",
+          "github": "GitHub"
         },
         "media": {
-          "strom": "Strom – stín stromu na stěně v sépiových tónech",
-          "nikita-2": "Šedobílá scéna s postavou ležící mezi větvemi",
-          "nikita-4": "Šedá přízračná rostlinná forma",
-          "nikita-1": "Temná socha z křídel a kostí"
+          "studanky": "Studánky – mobilní aplikace s mapou a detaily studánek",
+          "staje": "Inteligentní stáj – aplikace pro ovládání ventilace, plachet a světel",
+          "domov": "Domov pod palcem – aplikace pro chytrou domácnost",
+          "servers": "Výpis neofetch ze dvou serverů Mac Pro s Ubuntu",
+          "notysky": "Notýsky – zápisníky z e-shopu notysky.cz"
         }
       },
       "slejdy": {
@@ -149,6 +151,55 @@
           "pantheon-elastic": "Pantheon Elastic – socha v modrém světle",
           "silly-cubes": "Silly Cubes – tři skleněné kostky s barevnými scénami",
           "rocket-launch": "Rocket Launch – raketa na startovací rampě"
+        }
+      },
+      "jacox": {
+        "role": "Videomaker, lektor střihu",
+        "bio": [
+          "Deset let točí a stříhá. Specializuje se na **retention editing**, tedy na střih, který nepustí. Zajímá ho, proč u jednoho videa palec zastaví a u druhého ne, a jak se tempo, zvuk a barva skládají do něčeho, co se dívá samo. Krátké dokumenty, sport, hudební vizuály a obsah pro sociální sítě. Píše si vlastní nástroje pro DaVinci Resolve a učí střihače na Instagramu a YouTube, takže má denní zpětnou vazbu na to, co na sítích drží pozornost. Výběr správné techniky je u něj součástí kreativního procesu a jako správný nerd si některé vybavení navrhuje a 3D tiskne sám."
+        ],
+        "links": {
+          "website": "jacox.cz",
+          "youtube": "YouTube",
+          "instagram": "Instagram"
+        },
+        "media": {
+          "presents-1": "Černobílý střih: lezení po skalách, lyžování a detaily lyžařských brýlí",
+          "presents-2": "Lyžařský střih: skoky a jízda ve vysokohorském terénu"
+        }
+      },
+      "jakub-spacek": {
+        "role": "FX designer",
+        "bio": [
+          "Jakub Špaček je český umělec a samouk. Tvoří krásné, příjemné vizuální efekty, které umělecky ztvárňují abstraktní jevy skutečného světa. Pracuje se simulacemi a procedurálními postupy a vytváří díla, která diváka pohltí a sledují se skoro meditativně.",
+          "Začínal jako motion designer v Praze, pak nastoupil do londýnského studia FutureDeluxe, kde byl čtyři roky součástí týmu. Od té doby, co pracuje na volné noze, spolupracuje se studii, agenturami a značkami z celého světa.",
+          "Jako FX designer pracuje hlavně v **Houdini** a pravidelně spolupracuje s jeho vývojářem, firmou SideFX, jako lektor a řečník – vystoupil mimo jiné na konferencích OFFF a FMX. Navrhl také intro pro Houdini Connect, youtubový kanál SideFX, a zůstává oddaným fanouškem týmu, který za softwarem stojí.",
+          "Vedle klientské práce neustále vznikají i osobní projekty a několik z nich si našlo širší publikum. **Ceraflow** vznikl právě jako jeden z nich, vyprodal se jako NFT kolekce a v roce 2025 debutoval jako fyzické umění na pražském festivalu Designblok. Vyprodaná byla i samostatná kolekce **Bloom**, která byla následně vystavena v Kunsthalle, a z projektu **The Goo** vznikl základ celé řady vzdělávacích materiálů."
+        ],
+        "links": {
+          "website": "jakubspacek.com",
+          "instagram": "Instagram"
+        },
+        "media": {
+          "presents": "3D animace: otáčející se kvádr s barevnými vrstevnatými vzory"
+        }
+      },
+      "sara": {
+        "role": "Motion designerka & vizuální umělkyně",
+        "bio": [
+          "Sára se věnuje motion designu, animaci a grafickému designu. Ve volné tvorbě propojuje digitální technologie s terénním výzkumem a fyzickým prostředím. Pracuje především s **3D skenováním**, **fotogrammetrií** a **point cloudy**, které kombinuje s videem, instalací a nalezenými objekty. Ve svých projektech často vychází z dlouhodobého pohybu krajinou a zajímá ji vztah mezi přírodou, technologií, místem a jeho historií."
+        ],
+        "links": {
+          "portfolio": "Portfolio",
+          "instagram": "Instagram"
+        },
+        "media": {
+          "presents-1": "Pomalý průlet mechem porostlým lesním terénem",
+          "presents-2": "Sken betonové stavby a lesní půdy rozpadající se do koulí",
+          "presents-3": "Průsvitné tvary s odrazem oblohy a mraků",
+          "presents-4": "Bílá průsvitná plastika na černé ploše, v popředí houba",
+          "presents-5": "Bílá průsvitná plastika a houba z jiného úhlu",
+          "presents-6": "Průsvitný kámen s uzavřeným objektem v teplém světle"
         }
       },
       "meloon": {
@@ -170,6 +221,21 @@
           "presents-8": "3D animace: chlupatý zelený kaktus z mřížky"
         }
       },
+      "nikita": {
+        "role": "3D generalist, real artist",
+        "bio": [
+          "Umělec studující AVU v ateliéru Intermedia. Využívá vizuální softwary. Modeluje v 3D, VR, AI. Vystavuje pod [@stresservice](https://www.instagram.com/stresservice/)."
+        ],
+        "links": {
+          "instagram": "Instagram"
+        },
+        "media": {
+          "strom": "Strom – stín stromu na stěně v sépiových tónech",
+          "nikita-2": "Šedobílá scéna s postavou ležící mezi větvemi",
+          "nikita-4": "Šedá přízračná rostlinná forma",
+          "nikita-1": "Temná socha z křídel a kostí"
+        }
+      },
       "dari": {
         "role": "3D character animator",
         "bio": [],
@@ -182,23 +248,6 @@
           "presents-3": "Bílá chlupatá postavička králíka",
           "presents-4": "Bílá oblačná postavička v kouři",
           "memory-of-the-stone": "Memory of the Stone – zkamenělé květy v kameni"
-        }
-      },
-      "jakub": {
-        "role": "Tech lead & product",
-        "bio": [
-          "Jakub je vývojář mobilních aplikací a vytvořil dvě mobilní aplikace pro ovládání fyzického světa – jednu pro chytré domácnosti a druhou pro chytré stáje. Nyní pracuje na vývoji komunitní platformy pro sběr dat o studánkách. Ve volném čase se zaměřuje na vývoj pracovních postupů s AI agenty a provozuje e-shop [notysky.cz](https://notysky.cz/)."
-        ],
-        "links": {
-          "website": "smolikja.team",
-          "github": "GitHub"
-        },
-        "media": {
-          "studanky": "Studánky – mobilní aplikace s mapou a detaily studánek",
-          "staje": "Inteligentní stáj – aplikace pro ovládání ventilace, plachet a světel",
-          "domov": "Domov pod palcem – aplikace pro chytrou domácnost",
-          "servers": "Výpis neofetch ze dvou serverů Mac Pro s Ubuntu",
-          "notysky": "Notýsky – zápisníky z e-shopu notysky.cz"
         }
       },
       "daniel-holas": {

@@ -118,19 +118,21 @@
           "plantaz-card": "Plantáž – a plant card from the game"
         }
       },
-      "nikita": {
-        "role": "3D generalist, real artist",
+      "jakub": {
+        "role": "Tech lead & product",
         "bio": [
-          "An artist studying at the Academy of Fine Arts in Prague (AVU), Intermedia studio. Works with visual software. Models in 3D, VR and AI. Exhibits as [@stresservice](https://www.instagram.com/stresservice/)."
+          "Jakub is a mobile app developer who has built two apps for controlling the physical world – one for smart homes and one for smart stables. He is now developing a community platform for collecting data about natural springs. In his free time he focuses on building workflows with AI agents and runs the online shop [notysky.cz](https://notysky.cz/)."
         ],
         "links": {
-          "instagram": "Instagram"
+          "website": "smolikja.team",
+          "github": "GitHub"
         },
         "media": {
-          "strom": "Strom (Tree) – the shadow of a tree on a wall in sepia tones",
-          "nikita-2": "A grey-white scene with a figure lying among branches",
-          "nikita-4": "A grey, ghostly plant form",
-          "nikita-1": "A dark sculpture made of wings and bones"
+          "studanky": "Studánky – a mobile app with a map and details of natural springs",
+          "staje": "Smart stable – an app for controlling ventilation, sails and lights",
+          "domov": "Domov pod palcem – a smart home app",
+          "servers": "Neofetch output from two Mac Pro servers running Ubuntu",
+          "notysky": "Notýsky – notebooks from the notysky.cz shop"
         }
       },
       "slejdy": {
@@ -149,6 +151,55 @@
           "pantheon-elastic": "Pantheon Elastic – a statue in blue light",
           "silly-cubes": "Silly Cubes – three glass cubes with colourful scenes",
           "rocket-launch": "Rocket Launch – a rocket on its launch pad"
+        }
+      },
+      "jacox": {
+        "role": "Videomaker, editing tutor",
+        "bio": [
+          "He has been shooting and editing for ten years. He specialises in **retention editing** – cuts that don’t let go. He is interested in why a thumb stops on one video and not on another, and how pace, sound and colour add up to something that watches itself. Short documentaries, sport, music visuals and social media content. He writes his own tools for DaVinci Resolve and teaches editors on Instagram and YouTube, so he gets daily feedback on what holds attention online. Choosing the right gear is part of his creative process, and as a true nerd he designs and 3D prints some of it himself."
+        ],
+        "links": {
+          "website": "jacox.cz",
+          "youtube": "YouTube",
+          "instagram": "Instagram"
+        },
+        "media": {
+          "presents-1": "Black-and-white edit: rock climbing, skiing and close-ups of ski goggles",
+          "presents-2": "Ski edit: jumps and runs in high-mountain terrain"
+        }
+      },
+      "jakub-spacek": {
+        "role": "FX designer",
+        "bio": [
+          "Jakub Špaček is a self-taught Czech artist composing beautiful and pleasing visual effects that artistically represent abstract, real-world phenomena, working through simulation and procedural workflows to create pieces that are immersive and meditative to watch.",
+          "He began as a motion designer in Prague before joining FutureDeluxe in London, where he spent four years as part of the team. Since going independent he has worked with studios, agencies and brands worldwide.",
+          "As an FX Designer he works primarily in **Houdini**, and collaborates regularly with its developer, SideFX, as an educator and speaker, contributing at conferences including OFFF and FMX. He also designed the intro for Houdini Connect, SideFX’s YouTube channel, and remains a devoted fan of the team behind the software.",
+          "Personal projects run continuously alongside the client work, and several have found a wider audience. **Ceraflow** began as one of them, sold out as an NFT collection, and made its debut as physical art at Prague’s Designblok festival in 2025. **Bloom** also sold out as a separate collection and went on to be exhibited at Kunsthalle, while **The Goo** has become the basis for a body of educational material."
+        ],
+        "links": {
+          "website": "jakubspacek.com",
+          "instagram": "Instagram"
+        },
+        "media": {
+          "presents": "3D animation: a rotating block with colourful layered patterns"
+        }
+      },
+      "sara": {
+        "role": "Motion designer & visual artist",
+        "bio": [
+          "Sára works in motion design, animation and graphic design. In her personal work she connects digital technology with field research and physical environments. She works mainly with **3D scanning**, **photogrammetry** and **point clouds**, which she combines with video, installation and found objects. Her projects often grow out of long-term movement through the landscape, and she is interested in the relationship between nature, technology, a place and its history."
+        ],
+        "links": {
+          "portfolio": "Portfolio",
+          "instagram": "Instagram"
+        },
+        "media": {
+          "presents-1": "A slow pass over moss-covered forest ground",
+          "presents-2": "A scan of a concrete structure and forest floor dissolving into spheres",
+          "presents-3": "Translucent shapes reflecting the sky and clouds",
+          "presents-4": "A white translucent sculpture on a black surface with a mushroom in the foreground",
+          "presents-5": "The white translucent sculpture and the mushroom from another angle",
+          "presents-6": "A translucent stone with an embedded object in warm light"
         }
       },
       "meloon": {
@@ -170,6 +221,21 @@
           "presents-8": "3D animation: a furry green lattice cactus"
         }
       },
+      "nikita": {
+        "role": "3D generalist, real artist",
+        "bio": [
+          "An artist studying at the Academy of Fine Arts in Prague (AVU), Intermedia studio. Works with visual software. Models in 3D, VR and AI. Exhibits as [@stresservice](https://www.instagram.com/stresservice/)."
+        ],
+        "links": {
+          "instagram": "Instagram"
+        },
+        "media": {
+          "strom": "Strom (Tree) – the shadow of a tree on a wall in sepia tones",
+          "nikita-2": "A grey-white scene with a figure lying among branches",
+          "nikita-4": "A grey, ghostly plant form",
+          "nikita-1": "A dark sculpture made of wings and bones"
+        }
+      },
       "dari": {
         "role": "3D character animator",
         "bio": [],
@@ -182,23 +248,6 @@
           "presents-3": "A small white furry rabbit character",
           "presents-4": "A small white cloud-like character in smoke",
           "memory-of-the-stone": "Memory of the Stone – fossilised flowers in stone"
-        }
-      },
-      "jakub": {
-        "role": "Tech lead & product",
-        "bio": [
-          "Jakub is a mobile app developer who has built two apps for controlling the physical world – one for smart homes and one for smart stables. He is now developing a community platform for collecting data about natural springs. In his free time he focuses on building workflows with AI agents and runs the online shop [notysky.cz](https://notysky.cz/)."
-        ],
-        "links": {
-          "website": "smolikja.team",
-          "github": "GitHub"
-        },
-        "media": {
-          "studanky": "Studánky – a mobile app with a map and details of natural springs",
-          "staje": "Smart stable – an app for controlling ventilation, sails and lights",
-          "domov": "Domov pod palcem – a smart home app",
-          "servers": "Neofetch output from two Mac Pro servers running Ubuntu",
-          "notysky": "Notýsky – notebooks from the notysky.cz shop"
         }
       },
       "daniel-holas": {
