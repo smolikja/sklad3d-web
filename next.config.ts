@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
     // Member photos and posters are served from `public/`. Remote sources are
     // allowed only from the media host that keeps the large videos, so an
     // image linked from there still goes through the optimizer.
-    remotePatterns: [new URL("https://smolikja.team/assets/sklad3d/**")],
+    remotePatterns: [new URL("https://files.smolikja.team/assets/sklad3d/**")],
     formats: ["image/avif", "image/webp"],
   },
   async headers() {

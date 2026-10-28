@@ -11,7 +11,7 @@ each kind of file goes, how to prepare it and why the split looks like this.
 | Member portrait | `public/images/members/<id>/avatar.jpg` | `src/config/members.ts` (`avatar(...)`) |
 | Member still (render, photo, screenshot) | `public/images/members/<id>/work/<slug>.jpg` | `src/config/members.ts` (`image(...)`) |
 | Video poster (one frame of the video) | `public/images/members/<id>/posters/<media-id>.jpg` | `src/config/members.ts` (`video(...)`) |
-| Video | media host, `https://smolikja.team/assets/sklad3d/members/<folder>/showcase/<file>.mp4` | `src/config/members.ts` (`video(...)`) |
+| Video | media host, `https://files.smolikja.team/assets/sklad3d/members/<folder>/showcase/<file>.mp4` | `src/config/members.ts` (`video(...)`) |
 | Studio photo (hero, share image, structured data) | `public/images/space/studio.jpg` | `src/config/assets.ts` |
 | Logo | `public/brand/logo.svg`, inlined as `src/components/icons/sklad-logo.tsx` | `src/config/assets.ts` |
 | PWA icons | `public/brand/icon-192.png`, `icon-512.png`, `icon-512-maskable.png` | `src/config/assets.ts` |
@@ -23,6 +23,12 @@ member id, but not always (`dan` holds `daniel-holas`, `jakubspacek` holds
 `jakub-spacek`), which is why `video(...)` takes the full path. The host also
 keeps each member's original portrait next to `showcase/`; the copy in
 `public/` is the one the site serves.
+
+The media host is `files.smolikja.team`. Until 2026-10 the same paths were
+served from `smolikja.team`, which now runs a different site, so URLs on that
+domain no longer resolve. The host must answer range requests with `206` and
+must not compress MP4s (no `Content-Encoding`); Safari and iOS will not play a
+video otherwise.
 
 Every image is registered with its intrinsic pixel size. `next/image` uses it
 for the aspect ratio (no layout shift) and the responsive `srcset`; the gallery

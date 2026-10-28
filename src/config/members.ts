@@ -47,7 +47,7 @@ type MemberConfig = {
 };
 
 const IMAGE_ROOT = "/images/members";
-const VIDEO_ROOT = "https://smolikja.team/assets/sklad3d/members";
+const VIDEO_ROOT = "https://files.smolikja.team/assets/sklad3d/members";
 
 function avatar(member: string, width: number, height: number): ImageAsset {
   return { src: `${IMAGE_ROOT}/${member}/avatar.jpg`, width, height };
